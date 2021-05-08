@@ -179,6 +179,7 @@ func (ftp *FTP) Connect(host string, port int, socks5ProxyUrl string) (resp *Res
 	if port <= 0 {
 		port = DefaultFtpPort
 	}
+	ftp.Port = port
 
 	addr := fmt.Sprintf("%s:%d", ftp.Host, ftp.Port)
 
